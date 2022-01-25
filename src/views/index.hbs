@@ -1,0 +1,60 @@
+<h1>Aeromax Add Products</h1>
+
+<div class="formAndTable">
+    <div class="div_form">
+
+        <form action="/products/add" method="POST">
+            <h2>Add a Product</h2>
+                <div class="nameOfProduct">
+                    <input 
+                        name="nameOfProduct"
+                        type="text"
+                        placeholder="Name Of Product"
+                    >
+                </div>
+                <div class="priceOfProduct">
+                    <input 
+                        name="price"
+                        type="number"
+                        placeholder="Price Of Product"
+                    >
+                </div>
+                <div class="imageOfProduct">
+                    <input 
+                      name="img"
+                      type="text"
+                      placeholder="Image Of Product"
+                    >
+                </div>
+                <div class="categoryOfProduct">
+                    <select name="category">
+                        <option value="hardware">Hardware</option>
+                        <option value="software">Software</option>
+                        <option value="repair">Repair</option>
+                    </select>
+                </div>
+                <div class="button"><button>Add Product</button></div>
+        </form>
+    </div>
+
+
+    <pre>
+            <table>
+            
+            <tr>
+                <th>Name Of Product</th>
+                <th>Price Of Product</th>
+                <th>Category Of Product</th>
+                <th>Buttons</th>
+            </tr>
+        {{#each products}}
+            <tr>
+                <td>{{nameOfProduct}}</td>
+                <td>{{price}}</td>
+                <td>{{category}}</td>
+                <td><a href="/edit/{{_id}}">Edit</a> <a href="/delete/{{_id}}">Delete</a></td>
+            </tr>
+            {{/each}}
+        </table>
+    </pre>
+</div>

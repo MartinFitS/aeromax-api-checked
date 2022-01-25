@@ -1,0 +1,35 @@
+ <form action="/edit/{{product._id}}" method="POST">
+            <h2>Edit a Product</h2>
+                <div class="nameOfProduct">
+                    <input 
+                        name="nameOfProduct"
+                        type="text"
+                        placeholder="Name Of Product"
+                        value="{{product.nameOfProduct}}"
+                    >
+                </div>
+                <div class="priceOfProduct">
+                    <input 
+                        name="price"
+                        type="number"
+                        placeholder="Price Of Product"
+                        value="{{product.price}}"
+                    >
+                </div>
+                <div class="imageOfProduct">
+                    <input 
+                      name="img"
+                      type="text"
+                      placeholder="Image Of Product"
+                      value="{{product.img}}"
+                    >
+                </div>
+                <div class="categoryOfProduct">
+                    <select name="category">
+                        <option value="hardware">Hardware</option>
+                        <option value="software">Software</option>
+                        <option value="repair">Repair</option>
+                    </select>
+                </div>
+                <div class="button"><button>Add Product</button></div>
+</form>
