@@ -38,3 +38,8 @@ export const deleteProduct = async(req,res)=>{
 
     res.redirect("/")
 }
+
+export const allProducts = async(req,res)=>{
+    const products = await Product.find().lean();
+    res.json(products);
+}
