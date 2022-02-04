@@ -5,12 +5,15 @@ import {
         renderEdit,
         editProduct,
         deleteProduct,
-        allProducts
+        allProducts,
+        renderAeromax
     } from "../controllers/products.controllers";
 
 const router = Router();
 
 router.get("/", renderIndex);
+
+router.get("/aeromax-server", renderAeromax)
 
 router.post("/products/add", addProduct);
 
