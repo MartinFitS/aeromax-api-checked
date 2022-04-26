@@ -28,7 +28,7 @@ export const addProduct = async (req,res)=>{
     const productSaved = await product.save()
     console.log(productSaved);
     
-    res.redirect("/aeromax-server")
+    res.redirect("/aeromax-server");
 }
 
 export const renderEdit = async (req,res)=>{

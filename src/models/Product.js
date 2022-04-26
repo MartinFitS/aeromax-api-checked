@@ -18,6 +18,10 @@ const productSchema = new Schema({
     category:{
         type: String,
         required: true
+    },
+    show:{
+        type: String,
+        required: true
     }
 },{
     timestamps:true,
