@@ -3,11 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _mongoose = require("mongoose");
 
-var productSchema = new _mongoose.Schema({
+const productSchema = new _mongoose.Schema({
   nameOfProduct: {
     type: String,
     required: true,
@@ -25,6 +25,10 @@ var productSchema = new _mongoose.Schema({
   category: {
     type: String,
     required: true
+  },
+  show: {
+    type: String,
+    required: true
   }
 }, {
   timestamps: true,
@@ -33,4 +37,4 @@ var productSchema = new _mongoose.Schema({
 
 var _default = (0, _mongoose.model)("Product", productSchema);
 
-exports["default"] = _default;
+exports.default = _default;
